@@ -1,13 +1,13 @@
 import { Breadcrumb, Table } from "antd"
 import { Link } from "react-router-dom"
-import { ListItemActions } from "./listItemActions"
+import { ListItemActions } from "../../charter/charterList/listItemActions"
 
 const items = [
     {
         title: <Link to='/'>Дэшборд</Link>
     },
     {
-        title: 'Рейсы'
+        title: 'Туры'
     }
 ]
 
@@ -19,15 +19,9 @@ const cols = [
         width: '5%'
       },
       {
-        title: 'Рейс',
-        dataIndex: 'charter',
-        key: 'charter',
-        width: '15%'
-      },
-      {
-        title: 'Авиакомпания',
-        dataIndex: 'airline',
-        key: 'airline',
+        title: 'Тур',
+        dataIndex: 'tour',
+        key: 'tour',
         width: '15%'
       },
       {
@@ -37,15 +31,21 @@ const cols = [
         width: '15%'
       },
       {
-        title: 'Загрузка(мест)',
-        dataIndex: 'load',
-        key: 'load',
+        title: 'Цена(эконом / бизнес)',
+        dataIndex: 'price',
+        key: 'price',
         width: '15%'
       },
       {
-        title: 'Публичная продажа(мест)',
-        dataIndex: 'sale',
-        key: 'sale',
+        title: 'В продаже/продано(турпакетов)',
+        dataIndex: 'sales',
+        key: 'sales',
+        width: '15%'
+      },
+      {
+        title: 'Отель',
+        dataIndex: 'hotel',
+        key: 'hotel',
         width: '15%'
 
       },
@@ -60,20 +60,20 @@ const cols = [
 const dataSource = [
     {
         num: 1,
-        charter: 'TAS-KUL MH1855',
-        date: '15.03.2023 - 25.03.2023',
-        airline: 'Malaysia Airways',
-        load: '120/334',
-        sale: '56',
+        tour: 'Бали 8 дней/9 ночей',
+        date: '15.03.2023 - 24.03.2023',
+        price: '1800$ / 2400$',
+        sales: '120/334',
+        hotel: 'Nusa Penida view resort 5*',
         actions: <ListItemActions/>
     },
 ]
 
-export const CharterList = () => {
-    return (
-        <section className="charter-list w-full h-full">
+export const ToursList = () => {
+    return(
+        <section className="tour-list w-full h-full">
             <Breadcrumb className="p-5 pb-3" items={items} separator="-"/>
-            <h2 className="px-5 pb-2 font-semibold text-xl">Все рейсы</h2>
+            <h2 className="px-5 pb-2 font-semibold text-xl">Все туры</h2>
             <Table className="px-5" columns={cols} dataSource={dataSource}/>
         </section>
     )

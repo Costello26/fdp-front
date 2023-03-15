@@ -5,7 +5,7 @@ import { UserOutlined } from '@ant-design/icons'
 export const Topbar = () => {
     return(
       <section className='topbar min-h-[70px] bg-blue-500 w-full px-[30px] flex items-center'>
-        <div className='w-full flex items-center justify-between mx-auto'>
+        <div className='w-full flex items-center justify-between mx-auto max-w-[1440px]'>
           <div className='topbar__logo'>
             <a href="/" className='inline-block text-white text-xl'>Flyinup sales office</a>
           </div>

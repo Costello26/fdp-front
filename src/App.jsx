@@ -1,28 +1,22 @@
-import { Topbar } from './components/topbar'
-import { Sidebar } from './components/sidebar/sidebar'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { CharterListPage } from './pages/chartersList';
 import { SingleCharterPage } from './pages/singleCharter';
+import { LoginPage } from './pages/login';
+import { ToursListPage } from './pages/toursList/ToursListPage';
+import { SingleTourPage } from './pages/singleTour/singleTourPage';
 
 function App() {
   return (
     <div className="App">
-      <Topbar />
-      <section className='app-inner flex mx-auto'>
-        <Sidebar/>
-        <section className='content-section w-[80%] h-full flex items-center justify-center'>
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<h1>123</h1>}/>
-              <Route path="charter/" element={<CharterListPage/>}>
-                 <Route path="new/" element={<SingleCharterPage/>}/>
-              </Route>
-             
-              
-            </Routes>
-          </BrowserRouter>
-        </section>
-      </section>
+      <Routes>
+        <Route path="/" element={<h1>Home page</h1>}/>
+        <Route path="login/" element={<LoginPage/>}/>
+        <Route path="charters/" element={<CharterListPage/>}/>
+        <Route path="charters/new/" element={<SingleCharterPage/>}/>
+        <Route path="tours/" element={<ToursListPage/>}/>
+        <Route path="tours/new/" element={<SingleTourPage/>}/>
+        <Route path="*" element={<h1>404</h1>}/>
+      </Routes>
     </div>
   )
 }
