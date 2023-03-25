@@ -1,7 +1,8 @@
-import { AutoComplete, Breadcrumb, Form, Input, Radio, DatePicker, TimePicker, Button, Collapse, Modal } from "antd"
-import { SwapOutlined } from "@ant-design/icons"
-import { Link } from "react-router-dom"
-import { Class } from "./class"
+import React from "react";
+import { AutoComplete, Breadcrumb, Form, Input, Radio, DatePicker, TimePicker, Button, Collapse, Modal } from "antd";
+import { SwapOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
+import { Class } from "./class";
 import { ModalInfo } from "./modalInfo";
 
 const { Panel } = Collapse;
@@ -16,7 +17,7 @@ const items = [
     {
         title: 'Добавление рейса'
     },
-]
+];
 
 export const SingleCharter = () => {
     const callCancelModal = () => Modal.confirm({ 
@@ -120,5 +121,5 @@ export const SingleCharter = () => {
                 </Form>
             </div>
         </section>
-    )
-}
+    );
+};

@@ -1,11 +1,11 @@
-import { Avatar } from "antd"
-import { Link } from "react-router-dom"
-import { UserOutlined } from '@ant-design/icons'
+import React from "react";
+import { Avatar } from "antd";
+import { UserOutlined } from '@ant-design/icons';
 
 export const Topbar = () => {
     return(
       <section className='topbar min-h-[70px] bg-blue-500 w-full px-[30px] flex items-center'>
-        <div className='w-full flex items-center justify-between mx-auto max-w-[1440px]'>
+        <div className='w-full flex items-center justify-between'>
           <div className='topbar__logo'>
             <a href="/" className='inline-block text-white text-xl'>Flyinup sales office</a>
           </div>
@@ -18,5 +18,5 @@ export const Topbar = () => {
           </div>
         </div>
       </section>
-    )
-}
+    );
+};

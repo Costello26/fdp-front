@@ -4,41 +4,38 @@ export const ModalInfo = () => {
     return(
         <div>
             <span className="block mb-1 p-1 border rounded">
-                Рейс:&nbsp;
-                <span className="font-bold">TAS-WRZ</span>
+                Заголовок:&nbsp;
+                <span className="font-bold">Дубай 8 дней / 7 ночей</span>
             </span>
             <span className="block mb-1 p-1 border rounded">
-                Дата вылета:&nbsp;
-                <span className="font-bold">22.03.2023</span>
+                Отель:&nbsp;
+                <span className="font-bold">Al Mamzar JBR 5*</span>
             </span>
             <span className="block mb-1 p-1 border rounded">
-                Возвращения:&nbsp;
-                <span className="font-bold">01.04.2023</span>
+                Связанный рейс:&nbsp;
+                <span className="font-bold">MH-17 TAS-KUL-TAS</span>
             </span>
             <span className="block mb-1 p-1 border rounded">
-                Авиакомпания:&nbsp;
-                <span className="font-bold">LOT Polish Airlines</span>
+                Опции:&nbsp;
+                <span className="font-bold">Трансфер, завтраки, визовый сбор, мед.страховка</span>
             </span>
             <span className="block mb-1 p-1 border rounded">
-                Воздушное судно:&nbsp;
-                <span className="font-bold">Boeing 777</span>
+                Кол-во тур.пакетов к продаже(эконом класс):&nbsp;
+                <span className="font-bold">120 мест</span>
             </span>
             <span className="block mb-1 p-1 border rounded">
-                Мест(эконом класс):&nbsp;
-                <span className="font-bold">240 мест</span>
+                Кол-во тур.пакетов к продаже(бизнес класс):&nbsp;
+                <span className="font-bold">40 мест</span>
             </span>
             <span className="block mb-1 p-1 border rounded">
-                Мест(бизнес класс):&nbsp;
-                <span className="font-bold">60 мест</span>
-            </span>
-            <span className="block mb-1 p-1 border rounded">
-                Субагентам (бизнес класс):&nbsp;
-                <span className="font-bold">20 мест</span>
-            </span>
-            <span className="block mb-3 p-1 border rounded">
                 Субагентам (эконом класс):&nbsp;
                 <span className="font-bold">120 мест</span>
             </span>
+            <span className="block mb-3 p-1 border rounded">
+                Субагентам (бизнес класс):&nbsp;
+                <span className="font-bold">20 мест</span>
+            </span>
+            
             <span className="block mb-1 p-1 border border-purple-500 rounded">
                 Цена билета (эконом класс):&nbsp;
                 <span className="font-bold text-purple-600">1200$</span>

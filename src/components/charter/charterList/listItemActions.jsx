@@ -1,5 +1,6 @@
-import { Button,Space } from "antd"
-import { EditOutlined, DeleteOutlined, InfoOutlined } from '@ant-design/icons'
+import React from "react";
+import { Button } from "antd";
+import { EditOutlined, DeleteOutlined, InfoOutlined } from '@ant-design/icons';
 
 export const ListItemActions = () => {
     return(
@@ -8,5 +9,5 @@ export const ListItemActions = () => {
             <Button className="m-1" type="default" icon={<InfoOutlined />} shape='default' size="large"/>
             <Button className="m-1" type="default" icon={<DeleteOutlined />} shape='default' danger size="large"/>
         </div>
-    )
-}
+    );
+};

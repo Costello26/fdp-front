@@ -1,5 +1,7 @@
-import { Breadcrumb, Form, Input, Collapse, Steps, Button, Rate, Select } from "antd"
-import { Link } from "react-router-dom"
+
+import React from "react";
+import { Breadcrumb, Modal, Form, Input, Collapse, Steps, Button, Rate, Select } from "antd";
+import { Link, useNavigate } from "react-router-dom";
 import { ClassOfTour } from "./class";
 
 const { Panel } = Collapse;
@@ -15,7 +17,7 @@ const items = [
     {
         title: 'Добавление тура'
     },
-]
+];
 
 const options = [
     {
@@ -34,13 +36,21 @@ const options = [
         label: 'Мед.страховка',
         value: 'insurance'
     },
-]
+];
 
 export const SingleTour = () => {
+    const callCancelModal = () => Modal.confirm({ 
+        title: 'Подтвердите действие', 
+        content: 'Вы действительно хотите выйти и аннулировать введенные данные?', 
+        cancelText: 'Нет', 
+        okText: 'Да', 
+        okType: 'danger'
+    });
+    const navigate = useNavigate();
     return(
         <section className="single-tour w-full h-full">
             <Breadcrumb className="p-5 pb-3" items={items} separator="-"/>
-            <h2 className="px-5 pb-2 text-xl font-semibold">Создание туристического пакета в системе</h2>
+            <h2 className="px-5 pb-2 text-xl font-semibold">Создание туристического пакета в системе - Шаг 1</h2>
             <Steps
                 className="py-3"
                 progressDot
@@ -120,12 +130,12 @@ export const SingleTour = () => {
                         </div>
                     </div>
                     <div className="basis-full">
-                        <Button type="primary" className="my-2 mr-2 bg-blue-500">Продолжить</Button>
-                        <Button type="primary" className="my-2" danger={true}>Отменить</Button>
+                        <Button type="primary" className="my-2 mr-2 bg-blue-500" onClick={() => navigate('/tours/new/upload-media')}>Продолжить</Button>
+                        <Button type="primary" className="my-2" danger={true} onClick={callCancelModal}>Отменить</Button>
                     </div>
                     
                 </Form>
             </div>
         </section>
-    )
-}
+    );
+};

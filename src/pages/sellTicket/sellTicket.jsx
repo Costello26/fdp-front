@@ -1,11 +1,12 @@
 import React from "react";
-import { SingleTour } from "../../components/tour/singleTour";
+
+import { SellTicket } from "../../components/ticket/sellTicket";
 import { PageWrap } from "../../components/wrap/wrap";
 
-export const SingleTourPage = () => {
+export const SellTicketPage = () => {
     return (
         <PageWrap>
-            <SingleTour/>
+            <SellTicket/>
         </PageWrap>
     );
 };

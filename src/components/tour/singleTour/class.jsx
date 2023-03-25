@@ -1,4 +1,5 @@
-import { InputNumber } from "antd"
+import React from "react";
+import { InputNumber } from "antd";
 
 export const ClassOfTour = ({title}) => {
     return(
@@ -13,5 +14,5 @@ export const ClassOfTour = ({title}) => {
                 <span className="flex items-center justify-between mb-2">Цена(child): <InputNumber className="ml-[5px] w-7/12" controls={true} min={0} max={15000} defaultValue={''} placeholder="0" addonAfter="$"/></span>
             </div>
         </div>
-    )
-}
+    );
+};

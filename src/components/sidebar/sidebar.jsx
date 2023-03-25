@@ -1,7 +1,7 @@
-
-import { Menu } from "antd"
-import { UserAddOutlined, DesktopOutlined, TeamOutlined,LogoutOutlined, SettingOutlined, OrderedListOutlined, BookOutlined, PlusOutlined, FileDoneOutlined, DollarOutlined } from '@ant-design/icons'
-import { useNavigate } from "react-router-dom"
+import React from "react";
+import { Menu } from "antd";
+import { UserAddOutlined, DesktopOutlined, TeamOutlined,LogoutOutlined, SettingOutlined, OrderedListOutlined, BookOutlined, PlusOutlined, FileDoneOutlined, DollarOutlined } from '@ant-design/icons';
+import { useNavigate } from "react-router-dom";
 
 export const Sidebar = () => {
   const navigate = useNavigate();
@@ -98,8 +98,8 @@ export const Sidebar = () => {
         icon: <LogoutOutlined />,
         onClick: () => navigate('/login'),
       },
-    ]
+    ];
     return(
       <Menu className={`w-[20%] p-2`} items={menuItems} mode='inline'></Menu>
-    )
-}
+    );
+};

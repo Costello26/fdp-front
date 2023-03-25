@@ -1,10 +1,12 @@
-import { SingleCharter } from '../../components/charter'
-import { PageWrap } from '../../components/wrap/wrap'
+import React from "react";
+import { SingleCharter } from '../../components/charter';
+import { PageWrap } from '../../components/wrap/wrap';
 
 export const SingleCharterPage = () => {
 return (
     <PageWrap>
         <SingleCharter/>
     </PageWrap>
-)}
+    );
+};
 

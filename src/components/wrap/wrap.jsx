@@ -1,16 +1,18 @@
-import { Topbar } from "../topbar"
-import { Sidebar } from "../sidebar/sidebar"
+import React from "react";
+import { Topbar } from "../topbar";
+import { Sidebar } from "../sidebar/sidebar";
 
 export const PageWrap = ({children}) => {
+    //style={{height: window.innerHeight}}
     return(
-        <div style={{height: window.innerHeight}}>
+        <div> 
             <Topbar />
-            <section className='app-inner flex mx-auto h-full max-w-[1440px]'>
+            <section className='app-inner flex mx-auto h-full'>
                 <Sidebar/>
                 <section className='content-section w-[80%] h-full flex justify-center'>
                     {children}
                 </section>
             </section>
         </div>
-    )
-}
+    );
+};
