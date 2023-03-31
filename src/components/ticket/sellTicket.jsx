@@ -6,24 +6,23 @@ import { PersonalInfo } from "./personalInfo";
 import { DirectionInfo } from "./DirectionInfo";
 
 export const SellTicket = () => {
+    const [ticketType, setTicketType] = useState('avia');
     const items = [
         {
             title: <Link to='/'>Дэшборд</Link>
         },
         {
-            title: <Link to='/charters'>Билеты</Link>
+            title: <Link to={ticketType === 'avia' ? '/tickets/avia' : '/tickets/tour'}>Билеты</Link>
         },
         {
             title: 'Продажа билета'
         },
     ];
 
-    const [ticketType, setTicketType] = useState('avia');
-
     return(
         <section className="single-charter w-full">
             <Breadcrumb className="p-5 pb-3" items={items} separator="-"/>
-            <h2 className="px-5 pb-4 text-2xl font-semibold">Продажа билета</h2>
+            <h2 className="px-5 pb-4 text-2xl font-semibold">Продажа {ticketType === 'avia' ? 'билета' : 'туристического пакета'}</h2>
 
             <section className="sell-ticket px-5 flex gap-1">
                 <DirectionInfo ticketType={ticketType} setTicketType={setTicketType} />

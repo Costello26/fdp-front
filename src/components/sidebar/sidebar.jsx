@@ -1,5 +1,5 @@
 import React from "react";
-import { Menu } from "antd";
+import { Menu, Modal } from "antd";
 import { UserAddOutlined, DesktopOutlined, TeamOutlined,LogoutOutlined, SettingOutlined, OrderedListOutlined, BookOutlined, PlusOutlined, FileDoneOutlined, DollarOutlined } from '@ant-design/icons';
 import { useNavigate } from "react-router-dom";
 
@@ -50,14 +50,16 @@ export const Sidebar = () => {
         type: 'group',
         children: [
           {
-            label: 'Список проданных билетов',
+            label: 'Список проданных авиабилетов',
             key: 'sold-tickets',
-            icon: <DollarOutlined />
+            icon: <DollarOutlined />,
+            onClick: () => navigate('/tickets/avia'),
           },
           {
-            label: 'Список проданных тур.пакетов',
+            label: 'Список проданных турпакетов',
             key: 'sold-tour-tickets',
-            icon: <FileDoneOutlined />
+            icon: <FileDoneOutlined />,
+            onClick: () => navigate('/tickets/tour'),
           },
         ]
       },
@@ -68,22 +70,26 @@ export const Sidebar = () => {
           {
             label: 'Список офисов-субагентов',
             key: 'subagent-offices',
-            icon: <DesktopOutlined />
+            icon: <DesktopOutlined />,
+            onClick: () => navigate('/subagents/list'),
           },
           {
             label: 'Добавить офис-субагент',
             key: 'add-subagent-office',
-            icon: <PlusOutlined />
+            icon: <PlusOutlined />,
+            onClick: () => navigate('/subagents/add'),
           },
           {
             label: 'Список пользователей-субагентов',
             key: 'subagent-users',
-            icon: <TeamOutlined />
+            icon: <TeamOutlined />,
+            onClick: () => navigate('/subagents/users/'),
           },
           {
             label: 'Добавить пользователя-субагента',
             key: 'add-subagent-user',
-            icon: <UserAddOutlined />
+            icon: <UserAddOutlined />,
+            onClick: () => navigate('/subagents/users/add'),
           },
         ]
       },
@@ -96,10 +102,16 @@ export const Sidebar = () => {
         label: 'Выйти',
         key: 'logout',
         icon: <LogoutOutlined />,
-        onClick: () => navigate('/login'),
+        onClick: () => Modal.confirm({
+          title: 'Подтвердите действие',
+          content: 'Вы действительно хотите выйти из системы?',
+          keyboard: true,
+          onOk: () => navigate('/login'),
+          okType: 'danger'
+        }),
       },
     ];
     return(
-      <Menu className={`w-[20%] p-2`} items={menuItems} mode='inline'></Menu>
+      <Menu style={{ minHeight: window.innerHeight }} className={`w-[20%] p-2`} items={menuItems} mode='inline'></Menu>
     );
 };

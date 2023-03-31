@@ -9,7 +9,7 @@ export const PersonalInfo = () => {
         return setPassSerial(val.toUpperCase());
     };
     return(
-        <form className="w-1/3 border rounded-xl block p-3">
+        <form className="w-1/2 border rounded-xl block p-3">
                         <h3 className="mb-3 font-semibold text-xl opacity-[.5]">Личная информация</h3>
                         <Input className="mb-2 text-xl font-semibold" placeholder="Фамилия*"/>
                         <Input className="mb-2 text-xl font-semibold" placeholder="Имя*"/>

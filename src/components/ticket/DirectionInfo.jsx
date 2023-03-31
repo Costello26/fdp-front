@@ -8,7 +8,7 @@ export const DirectionInfo = ({ticketType, setTicketType}) => {
         { value: 'DME-TAS 30.06.23'},
     ];
     return(
-        <div className="w-1/3 border rounded-xl block p-3 flex flex-col justify-between">
+        <div className="w-1/2 border rounded-xl block p-3 flex flex-col justify-between">
                     <div className="direction">
                         <h3 className="mb-3 font-semibold text-xl opacity-[.5]">Направление</h3>
                         <span className="mb-3 block">Тип продажи: 
@@ -40,14 +40,14 @@ export const DirectionInfo = ({ticketType, setTicketType}) => {
                         <span className="mb-3 block">Авиакомпания: Qatar Airways</span>
                     </div>
                     <div className="overall">
-                        <span className="text-lg text-black/[.5] block mb-3">
+                        <span className="text-lg text-black/[.5] block">
                             Мест в продаже:&nbsp; 
-                            <p className="inline font-bold">45</p>
+                            <p className="inline font-bold">45 (1200)</p>
                         </span>
-                        <span className="text-2xl text-black/[.5] block border-t py-2">
+                        {/* <span className="text-2xl text-black/[.5] block border-t py-2">
                             Итого к оплате:&nbsp; 
                             <p className="inline font-bold text-green-700">1020$ / 11,614,607.40 сум</p>
-                        </span>
+                        </span> */}
                     </div>
                 </div>
     );
